@@ -1,0 +1,26 @@
+{
+    "name": "Slack's Emoji Style Chooser",
+    "description": "Choose from six different Emoji styles!",
+    "version": "0.5",
+    "manifest_version": 2,
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.slack.com/*"
+            ],
+            "js": [
+                "styles.js"
+            ]
+        }
+    ],
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": true
+    },
+    "icons": {
+        "128": "icon.png"
+    }
+}
