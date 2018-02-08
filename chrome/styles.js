@@ -18,7 +18,11 @@ function updateSet(set) {
     const url = 'https://raw.githubusercontent.com/iamcal/emoji-data/master/sheets-indexed-256/sheet_'
         + set + '_64_indexed_256.png';
 
-    style.innerHTML = '.emoji-outer, .emoji {background-image: url("' + url + '") !important;}';
+    style.innerHTML = `
+.emoji-outer, .msg_input_wrapper .emoji[style*="background-position"] {
+    background-image: url("${url}") !important;
+}
+    `;
 }
 
 chrome.storage.sync.get({
