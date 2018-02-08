@@ -1,0 +1,84 @@
+body {
+    width: 520px;
+}
+
+h3 {
+    -webkit-margin-start: -18px;
+}
+
+section {
+    -webkit-padding-start: 18px;
+}
+
+#status {
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 8px;
+    transition: opacity 0s;
+    opacity: 1;
+}
+
+#status.hide {
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+label input {
+    display: none;
+}
+
+h4 {
+    float: left;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+label {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 12px 16px 16px;
+    margin-bottom: 18px;
+    margin-right: 18px;
+}
+
+label.selected {
+    background: #eaf5fc;
+    border-color: #2d9ee0;
+}
+
+.preview {
+    clear: both;
+}
+
+.preview div {
+    background-size: 5200% 5200%;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+
+.preview-apple div {
+    background-image: url(https://raw.githubusercontent.com/iamcal/emoji-data/master/sheets-indexed-256/sheet_apple_32_indexed_256.png);
+}
+
+.preview-emojione div {
+    background-image: url(https://raw.githubusercontent.com/iamcal/emoji-data/master/sheets-indexed-256/sheet_emojione_32_indexed_256.png);
+}
+
+.preview-facebook div {
+    background-image: url(https://raw.githubusercontent.com/iamcal/emoji-data/master/sheets-indexed-256/sheet_facebook_32_indexed_256.png);
+}
+
+.preview-google div {
+    background-image: url(https://raw.githubusercontent.com/iamcal/emoji-data/master/sheets-indexed-256/sheet_google_32_indexed_256.png);
+}
+
+.preview-messenger div {
+    background-image: url(https://raw.githubusercontent.com/iamcal/emoji-data/master/sheets-indexed-256/sheet_messenger_32_indexed_256.png);
+}
+
+.preview-twitter div {
+    background-image: url(https://raw.githubusercontent.com/iamcal/emoji-data/master/sheets-indexed-256/sheet_twitter_32_indexed_256.png);
+}

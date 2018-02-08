@@ -9,7 +9,11 @@ Starting with January 2018, Slack does no longer provide options to choose your 
 [update](https://get.slack.help/hc/en-us/articles/115004846068-Slack-updates-and-changes#january-2018) announcement and
 [help](https://get.slack.help/hc/en-us/articles/202931348-Emoji-and-emoticons#change-your-emoji-display).
 
-Available emoji styles:
+## Published browser extensions
+* [Chrome](https://chrome.google.com/webstore/detail/slacks-emoji-style-choose/ghhoeeojiokhdmaelkllggbhjnlfpbop?utm_source=github)
+* [Firefox](https://addons.mozilla.org/cs/firefox/addon/slack-s-emoji-style-chooser/)
+
+## Available emoji styles
 * Apple
 * Emojione
 * Facebook

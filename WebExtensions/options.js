@@ -3,14 +3,16 @@
 /**
  * Save options.
  *
- * Saves options to Chrome storage.
+ * Saves options to browser storage.
  */
 function saveOptions() {
     const set = document.querySelector('input[name="set"]:checked').value;
 
-    chrome.storage.sync.set({
+    const setOptions = browser.storage.local.set({
         emojiSet: set
-    }, function () {
+    });
+
+    setOptions.then(function () {
         const status = document.getElementById('status');
 
         status.className = '';
@@ -18,9 +20,9 @@ function saveOptions() {
             status.className = 'hide';
         }, 1000);
 
-        chrome.tabs.query({url: "*://*.slack.com/*"}, function (tabs) {
+        browser.tabs.query({url: "*://*.slack.com/*"}, function (tabs) {
             for (let i = 0; i < tabs.length; i++) {
-                chrome.tabs.executeScript(tabs[i].id, {file: "styles.js"}, function () {
+                browser.tabs.executeScript(tabs[i].id, {file: "styles.js"}, function () {
                 });
             }
         });
@@ -30,12 +32,14 @@ function saveOptions() {
 /**
  * Restore options.
  *
- * Restores options from Chrome storage.
+ * Restores options from browser storage.
  */
 function restoreOptions() {
-    chrome.storage.sync.get({
+    const getOptions = browser.storage.local.get({
         emojiSet: 'apple'
-    }, function (items) {
+    });
+
+    getOptions.then(function (items) {
         const selected = document.getElementById(items.emojiSet);
         selected.checked = true;
         selected.parentNode.className = "selected";
