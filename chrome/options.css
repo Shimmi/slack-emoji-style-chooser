@@ -10,24 +10,26 @@ section {
     -webkit-padding-start: 18px;
 }
 
-#footer button {
-    display: inline-block;
-}
-
 #status {
     display: inline-block;
     font-weight: bold;
     -webkit-margin-start: 8px;
+    -webkit-transition: opacity 0s;
+    opacity: 1;
+}
+
+#status.hide {
+    -webkit-transition: opacity 1s ease-in-out;
+    opacity: 0;
 }
 
 label input {
-    float: left;
+    display: none;
 }
 
 h4 {
     float: left;
     -webkit-margin-before: 0;
-    -webkit-margin-start: 12px;
     -webkit-margin-after: 12px;
 }
 
@@ -48,7 +50,6 @@ label.selected {
 
 .preview {
     clear: both;
-    -webkit-margin-start: 23px;
 }
 
 .preview div {

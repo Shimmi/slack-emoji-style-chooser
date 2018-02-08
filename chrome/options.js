@@ -12,7 +12,19 @@ function saveOptions() {
         emojiSet: set
     }, function () {
         const status = document.getElementById('status');
-        status.textContent = 'Options saved. Please refresh you Slack tab.';
+
+        status.className = '';
+        setTimeout(function () {
+            status.className = 'hide';
+        }, 1000);
+
+        chrome.tabs.query({ url: "*://*.slack.com/*" }, function(tabs)
+        {
+            for(let i = 0; i < tabs.length; i++)
+            {
+                chrome.tabs.executeScript(tabs[i].id, { file: "styles.js" }, function() {});
+            }
+        });
     });
 }
 
@@ -44,11 +56,13 @@ function changeSelected(event) {
         selected.className = "";
     }
     document.getElementById(event.target.id).parentNode.className = "selected";
+
+    saveOptions();
 }
+
 
 const radios = document.querySelectorAll('input[name="set"]');
 Array.prototype.forEach.call(radios, function (radio) {
     radio.addEventListener('change', changeSelected);
 });
 document.addEventListener('DOMContentLoaded', restoreOptions);
-document.getElementById('save').addEventListener('click', saveOptions);

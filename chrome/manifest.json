@@ -1,10 +1,12 @@
 {
     "name": "Slack's Emoji Style Chooser",
     "description": "Do not like your emoji set on Slack? Pick one of six different Emoji styles!",
-    "version": "0.7",
+    "version": "0.8",
     "manifest_version": 2,
     "permissions": [
-        "storage"
+        "storage",
+        "tabs",
+        "*://*.slack.com/*"
     ],
     "content_scripts": [
         {
