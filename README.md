@@ -1,4 +1,4 @@
-# Slack's Emoji Style Chooser (Chrome extension)
+# Slack's Emoji Style Chooser (Chrome + Firefox extension)
 _Do not like your emoji set on Slack? Pick one of six different Emoji styles!_
 
 <p align="center">
