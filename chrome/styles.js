@@ -15,7 +15,7 @@ function updateSet(set) {
         document.head.appendChild(style);
     }
 
-    const url = 'https://raw.githubusercontent.com/iamcal/emoji-data/master/sheets-indexed-256/sheet_'
+    const url = 'https://raw.githubusercontent.com/iamcal/emoji-data/v4.0.4/sheets-indexed-256/sheet_'
         + set + '_64_indexed_256.png';
 
     style.innerHTML = `
